@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="car.FXMLDocumentController">
+   <children>
+      <TableView fx:id="tblCosts" onKeyPressed="#key">
+        <columns>
+            <TableColumn fx:id="colSpentOn" prefWidth="75.0" sortable="false" text="Spent on" />
+            <TableColumn fx:id="colPrice" prefWidth="75.0" sortable="false" text="Price (Ft)" />
+          <TableColumn fx:id="colDate" prefWidth="75.0" sortable="false" text="Date" />
+          <TableColumn fx:id="colKm" prefWidth="75.0" sortable="false" text="Kilometer" />
+            <TableColumn fx:id="colComment" prefWidth="200.0" sortable="false" text="Comment" />
+        </columns>
+      </TableView>
+      <VBox prefHeight="200.0" prefWidth="130.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#newCost" prefWidth="100.0" text="New" />
+            <Button mnemonicParsing="false" onAction="#modify" prefWidth="100.0" text="Modify" />
+            <Button mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
+            <Separator prefWidth="200.0" />
+            <Label fx:id="lblAlltogether" text="All together:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" top="10.0" />
+   </padding>
+</HBox>
